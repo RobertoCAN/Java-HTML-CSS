@@ -7,6 +7,7 @@ import java.util.List;
 public class Banco {
 
 	private static List<Empresa> lista = new ArrayList<Empresa>();
+	private static List<Usuario> listaUsuarios = new ArrayList<Usuario>();
 	private static Integer chaveSequencial = 1;
 
 	static {
@@ -16,7 +17,18 @@ public class Banco {
 		Empresa empresa2 = new Empresa();
 		empresa2.setId(chaveSequencial++);
 		empresa2.setNome("Teste");
+		
+		Usuario u1 = new Usuario();
+		u1.setLogin("Roberto");
+		u1.setSenha("123456");
+		
+		Usuario u2 = new Usuario();
+		u2.setLogin("Caetano");
+		u1.setSenha("123456");
 
+		listaUsuarios.add(u1);
+		listaUsuarios.add(u2);
+		
 		lista.add(empresa);
 		lista.add(empresa2);
 
@@ -49,6 +61,15 @@ public class Banco {
 				return empresa;
 			}
 		}
+		return null;
+	}
+
+	public Usuario existeUsuário(String login, String senha) {
+		for(Usuario usuario : listaUsuarios) {
+	        if(usuario.ehIgual(login, senha)) { 
+	            return usuario;
+	        }
+	    }
 		return null;
 	}
 

@@ -13,6 +13,14 @@
 </head>
 <body>
 
+<c:import url="logout-parcial.jsp"/>
+    
+	Usuario Logado: ${usuarioLogado.login }
+
+    <br>
+    <br>
+    <br>
+
 	<c:if test="${not empty empresas}">
             Empresa ${ empresa } cadastrada com sucesso! <fmt:formatDate value="${data}" pattern="dd/MM/yyyy" />
         </c:if>
