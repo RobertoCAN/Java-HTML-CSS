@@ -2,24 +2,28 @@ package br.com.alura.rh;
 
 
 import java.math.BigDecimal;
-
-import br.com.alura.rh.model.Cargo;
-import br.com.alura.rh.model.Funcionario;
+import java.time.LocalDate;
 
 public class Teste {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		BigDecimal salario01 = new BigDecimal(1000);
-		BigDecimal reajusteSalario = new BigDecimal(500);
+		BigDecimal valorVerificador = new BigDecimal("0.5");
+		BigDecimal valor = new BigDecimal("0.4");
 		
-		Funcionario numerUm = new Funcionario("Roberto", "2121212", Cargo.ANALISTA, salario01);
+//		System.out.println(valorVerificador.compareTo(new BigDecimal("0.5")) == 0);
+		System.out.println(new BigDecimal("1").compareTo(new BigDecimal("1")) >= 0);
+		
+		if (valor.compareTo(new BigDecimal("0.4")) > 0) {
+			throw new ValidacaoException("Reajuste nao pode ser superior a 40% do salario!");
+		}
 		
 		
-		System.out.println(numerUm.getSalario() +" "+ numerUm.getCargo());
+		System.out.println(valor);
 		
-		numerUm.reajustarSalario(reajusteSalario);
-		System.out.println(numerUm.getDataUltimoReajuste() +" "+ numerUm.getSalario());
+		LocalDate dataAtual = LocalDate.now();
+		System.out.println(dataAtual);
+		
 		
 	}
 
