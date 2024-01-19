@@ -1,5 +1,7 @@
 package teste;
 
+import java.util.Random;
+
 public class Teste {
 
 	public static void main(String[] args) {
@@ -7,15 +9,27 @@ public class Teste {
 
 		BuscaBinaria ob = new BuscaBinaria();
 
-		int arr[] = { 1, 4, 5, 8, 9, 10, 11, 12, 14, 16, 18, 19, 21, 24, 25 };
+//		Random random = new Random();
+//		int arr[] = new int[25];
+//		for (int i = 0; i < arr.length; i++) {
+//			arr[i] = random.nextInt(25) + 1;
+//			System.out.print(arr[i] + " - ");
+//		}
+
+		int arr[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25};
+		
 		int n = arr.length;
-		int x = 10;
+		
+		Random random = new Random();
+		int x = random.nextInt(100) + 1;
+		System.out.println("Numero para ser encotrado: "+x);
+		
 		int result = ob.buscaBinaria(arr, 0, n - 1, x);
 
 		if (result == -1)
-			System.out.println("Elemento não esta presente");
+			System.out.println("\n" + "Elemento não esta presente");
 		else
-			System.out.println("Element encontrado " + result);
+			System.out.println("\n" + "Elemento encontrado " + result);
 	}
 }
 
