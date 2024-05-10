@@ -13,8 +13,18 @@ public class NumerosPrimos {
 				}
 			}
 		}catch(Exception e) {
-			e.getMessage()
+			e.getMessage();
 		}
 		return true;			
+	}
+	
+	public void listarPrimos(int limiteSuperior) {
+		System.out.println("números primos até " + limiteSuperior);
+		for (int i = 2; i <= limiteSuperior; i++) {
+			if(verificarPrimalidade(i)) {
+				System.out.println( i + " ");
+			}
+		}
+		System.out.println();
 	}
 }
