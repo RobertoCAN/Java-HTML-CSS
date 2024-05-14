@@ -12,7 +12,13 @@ public class TesteNumerosPrimos {
 		int numero = valor.nextInt();
 		
 			boolean resultado = verificar.verificarPrimalidade(numero);
-			System.out.println(resultado);
+			verificar.listarPrimos(numero);
+		
+		VerificadorPrimo verificadorPrimo = new VerificadorPrimo();
+		verificadorPrimo.vericarSeEhPrimo(numero);
+		
+		GeradorPrimo geradorPrimo = new GeradorPrimo();
+		System.out.println("O proximo número após " + numero + " é " + geradorPrimo.gerarProximoPrimo(numero));
 	}
 
 }

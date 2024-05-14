@@ -19,10 +19,15 @@ public class NumerosPrimos {
 	}
 	
 	public void listarPrimos(int limiteSuperior) {
+		if(verificarPrimalidade(limiteSuperior)) {
+			System.out.println("É um número primo");
+		}else {
+			System.out.println("Não é um número primo");
+		}
 		System.out.println("números primos até " + limiteSuperior);
 		for (int i = 2; i <= limiteSuperior; i++) {
 			if(verificarPrimalidade(i)) {
-				System.out.println( i + " ");
+				System.out.print( i + " ");
 			}
 		}
 		System.out.println();
