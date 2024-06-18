@@ -2,6 +2,23 @@ package listaEstruturaDeDados;
 
 import java.util.LinkedList;
 
+
+//Definição: LinkedList é uma implementação da interface List baseada em uma lista duplamente encadeada.
+//
+//Características:
+//
+//Inserções e remoções no início e no final são rápidas (O(1)).
+//Acesso por índice é lento (O(n)).
+//3. Comparação entre ArrayList e LinkedList
+//ArrayList:
+//
+//Melhor para acesso aleatório rápido.
+//Melhor para casos onde as inserções e remoções são feitas principalmente no final da lista.
+//LinkedList:
+//
+//Melhor para inserções e remoções frequentes no início ou no meio da lista.
+//Menos eficiente para acesso aleatório.
+
 public class ListLinkedList {
 
 	public static void main(String[] args) {
