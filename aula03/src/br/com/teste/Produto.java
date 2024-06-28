@@ -4,6 +4,7 @@ public class Produto implements Tributavel{
 	
 	private String nome;
 	private double valor;
+	public double preco;
 	
 
 	public String getNome() {
