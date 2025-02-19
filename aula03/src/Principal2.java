@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
@@ -24,10 +26,36 @@ public class Principal2 {
         lista.forEach(System.out::println);
 //       lista.forEach(nome -> System.out.println(nome));
 //       
-//        for (Titulo item: lista){
-//         System.out.println(item.getNome());
+        for (Titulo item: lista){
+         System.out.println(item.getNome());
+         if (item instanceof Filme filme && filme.getClassificacao() > 2) {
+			
+		}
 ////         Filme filme = (Filme) item;
 ////         System.out.println("Classificação" + filme.getClassificacao());
-//	}
+	}
+        
+        ArrayList<String> buscaPorArtista = new ArrayList<String>();
+        buscaPorArtista.add("Adam Sander");
+        buscaPorArtista.add("Paulo");
+        buscaPorArtista.add("Jackeline");
+        buscaPorArtista.add("Roberto Caetano");
+        
+        System.out.println(buscaPorArtista);
+        
+        Collections.sort(buscaPorArtista);
+        
+        System.out.println("Ordenados: ");
+        System.out.println(buscaPorArtista);
+	
+        
+        
+        System.out.println("Lista de titulos ordenados.");
+        Collections.sort(lista);
+        System.out.println(lista);
+        
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("Ordenando por ano");
+        System.out.println(lista);
 	}
 }
