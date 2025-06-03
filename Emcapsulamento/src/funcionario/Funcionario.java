@@ -1,5 +1,6 @@
 package funcionario;
 
+
 public class Funcionario {
 
 	private String nome;
@@ -46,6 +47,10 @@ public class Funcionario {
 		System.out.printf("\nFuncionario %s - Cargo: %s - Salário %.2f", nome, cargo, salario);
 	}
 	
-	
+	@Override
+	public String toString() {
+
+		return "Nome: " + this.getNome() + ", Salário: " + this.salario;
+	}
 	
 }
