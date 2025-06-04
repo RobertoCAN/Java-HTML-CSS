@@ -8,26 +8,19 @@ public class TesteFuncionario {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-		int escolha;
+		int escolha = 2;
 
-		Funcionario funcionario;
-		Funcionario funcionario2 = new Funcionario("caetano", 25000);
-		Funcionario funcionario3 = new Funcionario("Assunção", 35550);
-		Funcionario funcionario4 = new Funcionario("Neto", 45000);
+		Funcionario funcionario = new Funcionario(null, 0);
+
 
 		ArrayList<Funcionario> lista = new ArrayList<>();
-
-		lista.add(funcionario2);
-		lista.add(funcionario3);
-		lista.add(funcionario4);
-		lista.forEach(System.out::println);
 
 		do {
 
 			System.out.println("\n----- MENU -----");
 			System.out.print("Escolha uma opção: \n");
 			System.out.println("1. Para inserir o nome digite e cargo 1");
-			System.out.println("2. Para inserir um cargo digite 2");
+			System.out.println("2. Alterar o valor");
 			System.out.println("0. Sair");
 
 			escolha = scanner.nextInt();
@@ -45,6 +38,9 @@ public class TesteFuncionario {
 				funcionario = new Funcionario(nomeFuncinario, salarioFuncinario);
 				lista.add(funcionario);
 				break;
+			case 2:
+				funcionario.reajustarSalario(escolha);
+			break;
 			case 0:
 
 				System.out.println("Saindo do programa.");
@@ -56,6 +52,7 @@ public class TesteFuncionario {
 		} while (escolha != 0);
 
 		lista.forEach(System.out::println);
+		
 
 	}
 }
