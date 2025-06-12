@@ -19,7 +19,7 @@ public class TesteFilme {
 			System.out.println("Escolha uma opcao: \n");
 			if (filmes.getTitulo() == null) {
 				System.out.println("1: Para inserir o nome do filme.\n");
-			}else {
+			} else {
 				System.out.println("1: Para inserir o nome do filme.\n" + filmes.getTitulo());
 			}
 			System.out.println("2: Para inserir a avaliacao.\n");
@@ -49,18 +49,13 @@ public class TesteFilme {
 
 		} while (key != 0);
 
-//		filmes.adicionarAvaliacao(4);
-//		filmes.adicionarAvaliacao(2);
-//		filmes.adicionarAvaliacao(3);
-//		filmes.adicionarAvaliacao(2);
-//		filmes.adicionarAvaliacao(6);
-
 		if (filmes.getTitulo() == null || filmes.calcularMedia() == 0) {
-			
+
 			System.out.println();
 		} else {
 			System.out.println(filmes.getTitulo() + " " + filmes.calcularMedia());
 		}
+		scanner.close();
 	}
 
 }
