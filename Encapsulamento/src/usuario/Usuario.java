@@ -21,7 +21,7 @@ public class Usuario {
 	}
 	
 	public void exibirStatus() {
-		System.err.println("Nome: " + nome);
+		System.out.println("Nome: " + nome);
 		System.out.println("Pontos: " + pontos);
 		System.out.println("Nivel: " + nivel);
 	}

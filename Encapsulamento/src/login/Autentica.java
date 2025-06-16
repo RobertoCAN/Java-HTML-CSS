@@ -27,7 +27,7 @@ public class Autentica extends User {
 				if (tentativasRestantes == 0) {
 					System.out.println("Acesso bloqueado. Contate o administrador.");
 				} else {
-					System.out.println("Usuáio ou senha incorreta! Tentativas restantes: " + tentativasRestantes);
+					System.err.println("Usuáio ou senha incorreta! Tentativas restantes: " + tentativasRestantes);
 				}
 
 			}
