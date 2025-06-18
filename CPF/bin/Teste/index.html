@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Dinâmica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+        ol {
+            list-style-type: 1;
+            padding: 0;
+        }
+        li {
+            padding: 8px;
+            background-color: #f0f0f0;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Adicione itens à lista</h2>
+    <input type="text" id="inputText" placeholder="Digite um texto e pressione Enter">
+    <ol id="itemList"></ol>
+
+    <script>
+        const inputText = document.getElementById('inputText');
+        const itemList = document.getElementById('itemList');
+
+        inputText.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter' && inputText.value.trim() !== '') {
+                const listItem = document.createElement('li');
+                listItem.textContent = inputText.value;
+                itemList.appendChild(listItem);
+                inputText.value = ''; // Limpa o campo de entrada
+            }
+        });
+    </script>
+</body>
+</html>
