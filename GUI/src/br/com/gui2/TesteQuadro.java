@@ -1,4 +1,4 @@
-package br.com.gui;
+package br.com.gui2;
 
 import javax.swing.JFrame;
 

@@ -1,4 +1,6 @@
-package br.com.gui;
+package br.com.gui2;
+
+import java.awt.Container;
 
 //import java.awt.event.WindowAdapter;
 //import java.awt.event.WindowEvent;
@@ -11,7 +13,7 @@ public class Quadro extends JFrame{
 	
 	public Quadro() {
 		setTitle("Primeiro Frame!");
-		setSize(300, 200);
+		setSize(300, 500);
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		///Colocando a para fechar a janela no mode de escuta. 
@@ -20,5 +22,8 @@ public class Quadro extends JFrame{
 //				System.exit(0);
 //			}
 //		});
+		
+		Container container = getContentPane();
+		container.add(new Painel());
 	}
 }
