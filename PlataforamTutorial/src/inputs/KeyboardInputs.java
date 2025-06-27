@@ -3,8 +3,16 @@ package inputs;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import main.GamePanel;
+
 public class KeyboardInputs implements KeyListener{
 
+	private GamePanel gamePanel;
+	
+	public KeyboardInputs(GamePanel gamePanel) {
+		this.gamePanel = gamePanel;
+	}
+	
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
@@ -21,16 +29,16 @@ public class KeyboardInputs implements KeyListener{
 	public void keyReleased(KeyEvent e) {
 		switch (e.getKeyCode()) {
 		case KeyEvent.VK_W:
-			System.out.println("It's W");
+			gamePanel.changeYDelta(-5);
 			break;
 		case KeyEvent.VK_A:
-			System.out.println("It's A");
+			gamePanel.changeYDelta(5);
 			break;
 		case KeyEvent.VK_S:
-			System.out.println("It's S");
+			gamePanel.changeXDelta(-5);
 			break;
 		case KeyEvent.VK_D:
-			System.out.println("It's D");
+			gamePanel.changeXDelta(5);
 			break;
 		}
 		
