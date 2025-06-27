@@ -11,6 +11,7 @@ import inputs.MouseInputs;
 public class GamePanel extends JPanel {
 	
 	private MouseInputs mouseInputs;
+	
 
 	public GamePanel() {
 		mouseInputs = new MouseInputs();
