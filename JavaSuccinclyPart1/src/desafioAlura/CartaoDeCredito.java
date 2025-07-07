@@ -18,7 +18,7 @@ public class CartaoDeCredito {
 		this.compras = new ArrayList<>();
 	}
 
-	public boolean lancaConta(Compras compras) {
+	public boolean lancaCompra(Compras compras) {
 		if (this.saldo > compras.getValor()) {
 			this.saldo -= compras.getValor();
 			this.compras.add(compras);
