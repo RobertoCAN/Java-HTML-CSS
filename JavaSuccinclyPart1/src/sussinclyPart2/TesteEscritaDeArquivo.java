@@ -6,7 +6,7 @@ public class TesteEscritaDeArquivo {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		EscritadeArquivo arquivo = new EscritadeArquivo();
-		arquivo.NomeDoArquivo(" teste.txt");
+		arquivo.NomeDoArquivo(3+"teste.txt");
 
 	}
 

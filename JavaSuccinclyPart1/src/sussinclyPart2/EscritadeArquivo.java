@@ -10,6 +10,8 @@ public class EscritadeArquivo {
 
 	public void NomeDoArquivo(String nome) throws FileNotFoundException {
 
+		assert nome instanceof String:"Coloque uma string por favor";
+		
 		this.nome = nome;
 		File file = new File(this.nome);
 		PrintWriter printWriter = new PrintWriter(file);
