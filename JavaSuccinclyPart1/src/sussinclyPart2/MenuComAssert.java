@@ -3,24 +3,34 @@ package sussinclyPart2;
 import java.util.Scanner;
 
 public class MenuComAssert {
+
 	Scanner scanner = new Scanner(System.in);
 
-	private Object valor;
+	public Integer escolha1;
+	public String escolha2;
 
 	public void menu_1(int valor) {
 		if (valor == 1) {
 			System.out.println("Digite um numero inteiro: ");
-			this.valor = scanner.nextInt();
-			assert this.valor instanceof Integer : "Erro: valor deveria ser Integer, mas n„o È!";
-			System.out.println("Valor recebido com sucesso!" + this.valor);
-			scanner.close();
+			escolha1 = scanner.nextInt();
+
+			assert escolha1 instanceof Integer : "Erro: valor deveria ser Integer, mas n√£o √©!";
+
+			System.out.println("Valor recebido com sucesso! " + this.escolha1);
+
 		} else if (valor == 2) {
-			System.out.println("Digite uma String inteiro: ");
-			this.valor = scanner.nextLine();
-			assert this.valor instanceof String : "Erro: valor deveria ser String, mas n„o È!";
-			System.out.println("Valor recebido com sucesso!" + this.valor);
-			scanner.close();
+			System.out.println("Digite uma String: ");
+			escolha2 = scanner.next();
+
+			assert escolha2 instanceof String : "Erro: valor deveria ser String, mas n√£o √©!";
+
+			System.out.println("Valor recebido com sucesso! " + this.escolha2);
+
+		} else {
+			System.out.println("op√ß√£o invalida!");
+			return;
 		}
 
+		scanner.close();
 	}
 }
