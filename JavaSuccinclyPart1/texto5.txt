@@ -1,6 +1,6 @@
-Seja bom,se você não poder ser bom, seja sortudo!
+Seja bom, se você não poder ser bom, seja sortudo!
 	 - Roberto Caetano
-129
-2.7183
+12
+2,7183
 true
-1.618034
+1,618034

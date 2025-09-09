@@ -12,11 +12,11 @@ public class ArquivoDeTextoEnumeros {
 			try {
 				PrintWriter out = new PrintWriter(file);
 				
-				out.println("Seja bom,se você não poder ser bom, seja sortudo!\n\t - Roberto Caetano");
-				out.println(129);
-				out.println(2.7183f);
+				out.println("Seja bom, se você não poder ser bom, seja sortudo!\n\t - Roberto Caetano");
+				out.println(12);
+				out.println("2,7183");
 				out.println(true);
-				out.println(1.618034);
+				out.println("1,618034");
 				out.close();
 				
 			} catch (FileNotFoundException e) {

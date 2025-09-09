@@ -23,7 +23,7 @@ public class TesteLerArquivo {
 			
 			System.out.println("String: " + s + "\n"+
 			"int: " + i + "\n" +
-			"float: " + f + "\n" +
+			"float: " + f + "f\n" +
 			"boolean: " + b + "\n" +
 			"double: " + d		);
 		} catch (FileNotFoundException e) {
