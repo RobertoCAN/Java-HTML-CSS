@@ -1,10 +1,13 @@
 package sussinclyPart2;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.Iterator;
 
 public class TesteAnimal {
 	
@@ -13,9 +16,9 @@ public class TesteAnimal {
 		Animal croc = new Animal("Crovodile", 3.2f , false);
 		Animal mozzie = new Animal("Mosquito", 0.2f, false);
 		
-		stego.print();
-		croc.print();
-		mozzie.print();
+//		stego.print();
+//		croc.print();
+//		mozzie.print();
 		
 		File file = new File("animals.dat");
 		
@@ -29,5 +32,28 @@ public class TesteAnimal {
 		
 		objectOutput.close();
 		fileOutput.close();
+		
+		//declara o array dos animais para ler
+		Animal[] animas = new Animal[3];
+		
+		//cria um arquivo e um objeto de entrada
+		FileInputStream fileImput = new FileInputStream(file);
+		ObjectInputStream objectInputStream = new ObjectInputStream(fileImput);
+		
+		//ler os objetos do arquivo
+		try {
+			for (int i = 0; i < animas.length; i++) {
+				animas[i] = (Animal) objectInputStream.readObject();
+			}
+			//fecha o stream
+			objectInputStream.close();
+			fileImput.close();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		System.out.println("Ler os objetos do arquivo: \n");
+		for (int i = 0; i < animas.length; i++) {
+			animas[i].print();
+		}
 	}
 }

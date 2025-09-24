@@ -8,6 +8,7 @@ const startPauseBT = document.querySelector('#start-pause')
 //variavel para tirar o foco dos botões.
 const botoes = document.querySelectorAll('.app__card-button')
 //musica
+const iniciarOuPausarBT = document.querySelector('#start-pause span')
 const musicaFocoInput = document.querySelector('#alternar-musica')
 const musica = new Audio('/sons/luna-rise-part-one.mp3')
 const audioPlay = new Audio('/sons/play.wav');
@@ -79,9 +80,9 @@ function alterarContexto(contexto){
 
 const contagemRegressiva = () => {
     if(tempoDecorridoEmSegundos <= 0){
-         audioTempoFinalizado.play()
-        zerar()
-        alert('Tempo finalizado')
+       //  audioTempoFinalizado.play()
+       alert('Tempo finalizado')
+       zerar()
         return
     }
     tempoDecorridoEmSegundos -= 1
@@ -97,11 +98,13 @@ function iniciarOUPusar(){
         zerar()
         return
     }
-    intervaloId = setInterval(contagemRegressiva, 1000)
     audioPlay.play();
+    intervaloId = setInterval(contagemRegressiva, 1000)
+    iniciarOuPausarBT.textContent = "Pausar"
 }
 
 function zerar(){
     clearInterval(intervaloId)
     intervaloId = null
+     iniciarOuPausarBT.textContent = "Começar"
 }
