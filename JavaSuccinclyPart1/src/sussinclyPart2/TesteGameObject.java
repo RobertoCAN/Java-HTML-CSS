@@ -1,4 +1,4 @@
-package sussinclyPart2;
+ package sussinclyPart2;
 
 public class TesteGameObject {
 
@@ -7,6 +7,7 @@ public class TesteGameObject {
 		
 		gameObjects[0] = new Player();
 		
+		
 		for (int i = 1; i < gameObjects.length; i++) {
 			gameObjects[i] = new NPC();
 		}
@@ -14,6 +15,11 @@ public class TesteGameObject {
 		for (int i = 0; i < gameObjects.length; i++) {
 			gameObjects[i].move();
 		}
+		
+		gameObjects[0].x = 9;
+		gameObjects[0].y = 7;
+		gameObjects[0].print();
+		gameObjects[3].print();
 
 	}
 

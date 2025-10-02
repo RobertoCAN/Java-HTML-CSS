@@ -6,4 +6,9 @@ public class Player extends GameObject {
 		System.out.println("It is the player is move...");
 
 	}
+
+	@Override
+	public void print() {
+		System.out.println("Position: " + x + ", " + y);
+	}
 }
