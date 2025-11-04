@@ -4,6 +4,16 @@ public class Point implements Comparable {
 
 	public double x, y;
 
+	
+	
+	public double getX() {
+		return x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
 	public Point(double x, double y) {
 
 		this.x = x;
