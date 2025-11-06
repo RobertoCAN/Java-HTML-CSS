@@ -27,11 +27,11 @@ public class Numeros {
 		int iniciando = 0;
 		
 		for (Integer numero : numerosUnicos) {
-			arrayFinal[iniciando++] = numerosUnicos;
+			arrayFinal[iniciando++] = numero;
 			
 		System.out.println("Impressão do array: ");
 		
-		for (int i : arrayFinal) {
+		for (Integer i : arrayFinal) {
 			System.out.println(i + " ");
 		}
 		}
